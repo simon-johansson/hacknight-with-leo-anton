@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 My Steam Friends
+
+  for friend in friends
+    h2 #{friend.personaname} (#{friend.realname})
+    h3= parseInt(friend.personastate) ? "Online" : "Offline"
+    img(src="#{friend.avatarfull}")
+
