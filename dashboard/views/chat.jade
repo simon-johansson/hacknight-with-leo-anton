@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Familjechatten
+
+  for message in messages
+    p= message
+
+  form(action='/chat', method='post')
+    input(type='text', name='message')
+    br
+    input(type='submit', formmethod='post', value='Skicka')
+
